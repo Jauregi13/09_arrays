@@ -6,11 +6,19 @@ public class Ejercicios01 {
 		
 		int[] numeros = new int[15];
 		int sumaTotal = 0;
-		double media = 0;
-		for (int i = 0; i < numeros.length; i++){
+		float media = 0;
+		int i= 0;
+		int valor_Max = 0;
+		for (i = 0; i < numeros.length; i++){
 			numeros[i]= (int)(Math.random()*11);
 			System.out.print(numeros[i]+", ");
 			sumaTotal = sumaTotal + numeros[i];
+			if (i == 0){
+				valor_Max = numeros[i];
+			}
+			if (numeros[i] >= valor_Max){
+				valor_Max = numeros[i];
+			}
 						
 		}
 		System.out.println("");
@@ -25,6 +33,7 @@ public class Ejercicios01 {
 		
 		
 		//valor maximo del array
+		System.out.println("El valor maximo de todos los numeros es: " +valor_Max);
 
 	}
 
