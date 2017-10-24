@@ -1,3 +1,4 @@
+import java.text.DecimalFormat;
 
 public class Ejercicios01 {
 
@@ -6,12 +7,11 @@ public class Ejercicios01 {
 		
 		int[] numeros = new int[15];
 		int sumaTotal = 0;
-		float media = 0;
-		int i= 0;
+		double media = 0.0;
 		int valor_Max = 0;
-		for (i = 0; i < numeros.length; i++){
+		DecimalFormat decimal = new DecimalFormat("#.00");
+		for (int i = 0; i < numeros.length; i++){
 			numeros[i]= (int)(Math.random()*11);
-			System.out.print(numeros[i]+", ");
 			sumaTotal = sumaTotal + numeros[i];
 			if (i == 0){
 				valor_Max = numeros[i];
@@ -23,11 +23,21 @@ public class Ejercicios01 {
 		}
 		System.out.println("");
 		// sacar por pantalla todos los valores en una misma linea separados por coma
-		
+		for (int i = 0; i < numeros.length; i++){
+			if (i < numeros.length-1){
+				System.out.print(numeros[i]+", ");
+			}
+			else{
+				System.out.println(numeros[i]+".");
+			}
+			
+		}
 		// sacar la suma de todos los valores por pantalla
 		
 		System.out.println("La suma de todos los valores es: " + sumaTotal);
 		// sacar la media de todos los valores
+		System.out.println(sumaTotal);
+		System.out.println(numeros.length);
 		media = sumaTotal / numeros.length;
 		System.out.println("La media de todos los valores es: " + media);
 		
