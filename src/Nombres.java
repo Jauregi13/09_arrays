@@ -20,12 +20,11 @@ public class Nombres {
 			}
 			if (primerNombre.compareTo(nombres[i]) > 0){
 				primerNombre = nombres[i];
-				System.out.println(primerNombre);
-			}
-			else{
-				System.out.println(primerNombre);
+				
 			}
 		}
+		// muestra por pantalla
+		System.out.println("Este nombre es el que va antes en el alfabeto: " +primerNombre);
 		
 
 	}
