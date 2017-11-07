@@ -14,6 +14,7 @@ public class MainMatriz {
 				System.out.print(matriz[i][j]);
 				System.out.print(", ");
 			}
+			System.out.println(" ");
 		} 
 
 	}
