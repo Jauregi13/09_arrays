@@ -20,13 +20,13 @@ public class OrdenamientoInsercion {
 
 			} else if (valor > numeros[i + 1]) {
 				int aux = 0;
-				for (int j = i+1; j >= 1; j--) {
-					if(numeros[j] < valor){
+				indice = i -1;
+				for (int j = i+1; j >= 1 && numeros[j] < valor && indice >= 0; j--) {
 						aux = numeros[j];
 						numeros[j]= numeros[j-1];
 						numeros[j-1] = aux;
-						valor = numeros[j-2];
-					}
+						valor = numeros[indice];
+						indice--;
 						
 						
 					
