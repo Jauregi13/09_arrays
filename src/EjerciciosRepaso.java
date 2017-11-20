@@ -9,7 +9,12 @@ import java.util.Scanner;
 		 *
 		 *3-	Programa que lea una cadena de caracteres del teclado 
 		 *		y muestre sus siglas. Por ejemplo: tren articulado ligero 
-		 *		goicoechea oriol TALGO 
+		 *		goicoechea oriol TALGO
+		 * 
+		 *5-	Hacer un programa que pida por pantalla numeros para calcular el total,
+		 *		si es un numero par sumará al total y si es impar restará.
+		 *		Si el usuario mete el numero 0 el programa finalizará y sacará por
+		 *		pantalla el total.
 		 */
 public class EjerciciosRepaso {
 	
@@ -52,6 +57,16 @@ public class EjerciciosRepaso {
 		}
 		return multiplos;
 	}
+	public static int ejercicio5(int numero, int total){
+		if (numero % 2 == 0){
+			total = total + numero;
+		}
+		else {
+			total = total - numero;
+		}
+		
+		return total;
+	}
 
 	public static void main(String[] args) {
 		
@@ -77,7 +92,19 @@ public class EjerciciosRepaso {
 		for(int i = 0; i < multiplos.length; i++){
 			System.out.println(multiplos[i]);
 		}
-
+		
+		//ejercicio 5
+		int total = 0;
+		int numero3 = 0;
+		do{
+			System.out.println("Escribe un numero:");
+			numero3 = lector.nextInt();
+			total = ejercicio5(numero3, total);
+		}
+		
+		while (numero3 != 0);
+		
+		System.out.println("La suma total de los numeros es: " + total);
 	}
 
 }
